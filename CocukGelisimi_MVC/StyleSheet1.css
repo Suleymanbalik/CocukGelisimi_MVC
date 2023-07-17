@@ -1,0 +1,25 @@
+﻿
+/*Table Head*/
+.tablehead{
+    font-size:10px;
+    font-family:'Segoe UI'
+    
+}
+
+
+/*----------Tablehead StudentlistOutput----------*/
+.tableheadStudentlistOutput {
+    font-size: 15px;
+    font-family: 'Segoe UI'
+    
+}
+/*.card {
+    width: 600px;
+    height: 300px;
+    border-radius: 3px;
+}
+.cardAddStudent{
+    
+    margin:15px;
+    box-shadow:10px 10px 1px rgba(0,0,0,.4);
+}*/

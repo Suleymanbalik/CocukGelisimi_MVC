@@ -1,0 +1,54 @@
+﻿@using CocukGelisimi_MVC.Models.Entity
+@model List<Table_Student>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-2">
+   
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table caption-top table-hover align-middle">
+                <caption><strong>ÖĞRENCİ LİSTESİ(Bilişsel Gelişim)</strong></caption>
+                <thead class="table-dark">
+                    <tr>
+                        <th>Öğrenci No</th>
+                        <th>Öğrenci Ad</th>
+                        <th>Öğrenci Soyad</th>
+
+
+                        <th>Düzenle</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+
+                    @foreach (var stdnt in Model)
+                    {
+                                             
+                        <tr>
+                            <td>@stdnt.StudentID</td>
+                            <td>@stdnt.StudentFirstName</td>
+                            <td>@stdnt.StudentLastName</td>
+                            <td>
+
+                                <a href="#" id="iconDeleteStudent" onclick="return confirm('Silme İşlemine Devam Etmek İstiyor Musunuz?')"><span class="text-danger"><i class="fa-solid fa-trash"></i></span></a>
+                                <a href="/CognitiveEnhancement/TransportDataToCognitivePage/@stdnt.StudentID"><span class="text-primary ms-2"><i class="bi bi-pencil-square"></i></span></a>
+                                <a href="/CognitiveEnhancement/AddCognitiveData/@stdnt.StudentID"><span class="text-primary ms-2"><i class="bi bi-plus-square"></i></span></a>
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+
+            <div class="container my-2">
+                <div class="row">
+                    <a href="/CognitiveEnhancement/AddCognitiveData" class="btn btn-success">Veri Gir</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

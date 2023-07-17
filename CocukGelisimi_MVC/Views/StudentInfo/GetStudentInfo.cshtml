@@ -1,0 +1,35 @@
+﻿@model CocukGelisimi_MVC.Models.Entity.Table_Student
+@{
+    ViewBag.Title = "GetStudentInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card" style="width: 600px; height: 500px; border-radius: 3px; margin: 15px; box-shadow: 10px 10px 1px rgba(0,0,0,.2); ">
+    <div class="card-header">
+        ÖĞRENCİ GÜNCELLEME PANELİ
+    </div>
+    <div class="card-body">
+        @using (Html.BeginForm("UpdateStudent", "StudentInfo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.HiddenFor(m=>m.StudentID) // bu kısmı ekledik ki guncellede null değer  gelmesin hata vermesin
+            <label class="mt-2">Öğrenci ID</label>
+            @Html.TextBoxFor(m => m.StudentID, new { @class = "form-control" })
+            <label class="mt-2">Öğrenci Ad</label>
+            @Html.TextBoxFor(m => m.StudentFirstName, new { @class = "form-control" })
+            <label class="mt-2">Öğrenci Soyad</label>
+            @Html.TextBoxFor(m => m.StudentLastName, new { @class = "form-control" })
+            <label class="mt-2">Öğrenci Yaş(Ay Olarak)</label>
+            @Html.TextBoxFor(m => m.StudentYearAsMonth, new { @class = "form-control" })
+            <label class="mt-2">Öğrenci Fotoğraf</label>
+            <input type="file" name="StudentPicture" class="form-control" />
+            <div class="d-flex justify-content-between col-12 mt-4">
+                <div class="col-2 ">
+                    <button class="btn btn-success" type="submit">Güncelle</button>
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>
+

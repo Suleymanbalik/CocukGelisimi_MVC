@@ -1,0 +1,65 @@
+﻿
+@using CocukGelisimi_MVC.Models.ViewModels
+@model LanguangeDevelopmentViewModel
+
+
+
+@{
+    ViewBag.Title = "GetLanguageDevelopmentStudentList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("", "", FormMethod.Post))
+{
+    {
+        <div class="container mt-2">
+
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table caption-top table-hover align-middle">
+                        <caption><strong>DEĞERLENDİRME LİSTESİ(Dil Gelişimi)</strong></caption>
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Öğrenci No</th>
+                                <th>Ad Soyad</th>
+                                <th>Yıl</th>
+                                <th>Dönem</th>
+                                <th>Kaçıncı Değerlendirme</th>
+                                <th>Düzenle</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+
+                            @foreach (var item in Model.Languagelist)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.LanguageDevelopmentID
+                                    </td>
+                                    <td>
+                                        @item.StudentID
+                                    </td>
+                                    <td>
+                                        @item.StudentFullName
+                                    </td>
+                                    <td>
+                                        @item.EvaluationYear
+                                    </td>
+                                    <td>
+                                        @item.EvaluationPeriod
+                                    </td>
+                                    <td>
+                                        @item.EvaluationSt
+                                    <td>
+                                        <a href="/LanguageDevelopment/GetLanguageDevelopmentData/@item.LanguageDevelopmentID"><span class="text-primary ms-2"><i class="bi bi-pencil-square"></i></span></a>                                        
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+}

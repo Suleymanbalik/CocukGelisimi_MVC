@@ -1,0 +1,363 @@
+﻿@model CocukGelisimi_MVC.Models.ViewModels.LanguangeDevelopmentViewModel
+@{
+    ViewBag.Title = "AddLanguageData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("AddLanguageData", "LanguageDevelopment", FormMethod.Post))
+{
+    {
+        <div class="container col-12 mt-2">
+
+            <strong>DİL GELİŞİMİ VERİ GİRİŞ PANELİ</strong>
+
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-4 mb-2" style="border:2px solid #ffd800; border-radius:13px">
+                    <label class="mt-2"><strong>Öğrenci NO</strong></label>
+                    @Html.TextBoxFor(m => m.Student.StudentID, new { @class = "form-control", disabled = "disabled" })
+                    @Html.HiddenFor(m => m.Student.StudentID)
+                    <label class="mt-2"><strong>Öğrenci Ad</strong></label>
+                    @Html.TextBoxFor(m => m.Student.StudentFirstName, new { @class = "form-control", disabled = "disabled" })
+                    @Html.HiddenFor(m => m.Student.StudentFirstName)
+                </div>
+                <div class="col-sm-12-md-4 col-lg-4 mb-2" style="border: 2px solid #ff0000; border-radius: 13px">
+                    <label class="mt-2"><strong>Öğrenci Soyad</strong></label>
+                    @Html.TextBoxFor(m => m.Student.StudentLastName, new { @class = "form-control", disabled = "disabled" })
+                    @Html.HiddenFor(m => m.Student.StudentLastName)
+
+                    <label class="mt-2"><strong>Değerlendirme Yılı</strong></label>
+                    @Html.TextBoxFor(m => m.Language.EvaluationYear, new { @class = "form-control", @type = "number" })
+                </div>
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 pb-2" style="border: 2px solid #00ff21; border-radius: 13px">
+                    <label class="mt-2"><strong>Değelendirme Dönemi</strong></label>
+                    @Html.TextBoxFor(m => m.Language.EvaluationPeriod, new { @class = "form-control" })
+
+                    <label class="mt-2"><strong>Kaçıncı Değerlendirme</strong></label>
+                    @Html.TextBoxFor(m => m.Language.EvaluationSt, new { @class = "form-control", @type = "number" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 1-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım1)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain1", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain1,
+                   Text = c.LanguageGain1
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain1')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım1, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 2-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım2)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain2", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain2,
+                   Text = c.LanguageGain2
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain2')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım2, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 3-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım3)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain3", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain3,
+                   Text = c.LanguageGain3
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain3')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım3, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 4-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım4)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain4", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain4,
+                   Text = c.LanguageGain4
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain4')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım4, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 5-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım5)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain5", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain5,
+                   Text = c.LanguageGain5
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain5')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım5, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 6-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım6)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain6", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain6,
+                   Text = c.LanguageGain6
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain6')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım6, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 7-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım7)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain7", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain7,
+                   Text = c.LanguageGain7
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain7')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım7, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 8-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım8)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain8", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain8,
+                   Text = c.LanguageGain8
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain8')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım8, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 9-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım9)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain9", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain9,
+                   Text = c.LanguageGain9
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain9')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım9, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 10-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım10)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain10", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain10,
+                   Text = c.LanguageGain10
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain10')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım10, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------Kazanım 11-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım11)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain11", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain11,
+                   Text = c.LanguageGain11
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain11')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım11, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        //-------Kazanım 2-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-2 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong>@Html.LabelFor(m => m.Language.Kazanım12)</strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.DropDownList("gain12", Model.Contents.Select(c => new SelectListItem
+               {
+                   Value = c.LanguageGain12,
+                   Text = c.LanguageGain12
+               }).Where(c => !string.IsNullOrEmpty(c.Value)).ToList(), "Seç", new { @class = "form-control" })
+                    <a href="#" class="btn text-dark ms-lg-2" onclick="event.preventDefault();copyText('gain12')">
+                        <i class="fs-4 fa-solid fa-copy"></i><span class="fs-5"></span>
+                    </a>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-6 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.Kazanım12, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        //-------My Suggestion-----
+        <div class="container col-12 mt-2">
+            <div class="row">
+                <div class="col-sm-12-md-4 col-lg-4 mb-2 d-flex justify-content-lg-center align-items-center p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    <strong><label class="mt-2">Öğretmen Görüşü</label></strong>
+                </div>
+
+                <div class="col-sm-12-md-4 col-lg-8 mb-2 p-2" style="border: 2px solid #001C30; border-radius: 13px">
+                    @Html.TextAreaFor(m => m.Language.MySuggestion, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+    }
+
+    <div class="d-flex justify-content-between col-12 my-3">
+        <div class="col-2 ">
+            <button class="btn btn-success" type="submit">Ekle</button>
+        </div>
+
+    </div>
+}
+
+<script>
+    function copyText(id) {
+        var copyText = document.getElementById(id);
+        console.log(copyText)
+        // Select the text field
+        copyText.focus();
+        //copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.options[copyText.selectedIndex].text);
+    }
+</script>
+

@@ -1,0 +1,1303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Cocuk_Gelisimi_DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Table_About">
+          <Key>
+            <PropertyRef Name="AboutMeID" />
+          </Key>
+          <Property Name="AboutMeID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MyName" Type="varchar" MaxLength="8" />
+          <Property Name="MySurname" Type="varchar" MaxLength="15" />
+          <Property Name="MyPhoneNumber" Type="varchar" MaxLength="12" />
+          <Property Name="MyEmail" Type="nvarchar" MaxLength="25" />
+          <Property Name="MyTwitterLink" Type="nvarchar" MaxLength="150" />
+          <Property Name="MyInstagramLink" Type="nvarchar" MaxLength="150" />
+          <Property Name="MyFacebookLink" Type="nvarchar" MaxLength="150" />
+          <Property Name="MyYoutubeLink" Type="nvarchar" MaxLength="150" />
+          <Property Name="MyLinkedInLink" Type="nvarchar" MaxLength="150" />
+          <Property Name="MyAddress" Type="varchar" MaxLength="250" />
+          <Property Name="AboutMe" Type="nvarchar(max)" />
+          <Property Name="MyPicture" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Table_Activity">
+          <Key>
+            <PropertyRef Name="ActivityID" />
+          </Key>
+          <Property Name="ActivityID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ActiviyName" Type="nchar" MaxLength="10" />
+          <Property Name="ActivityExplanation" Type="nchar" MaxLength="10" />
+          <Property Name="Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Table_Cognitive_Enhancement">
+          <Key>
+            <PropertyRef Name="CognitiveEnhancementID" />
+          </Key>
+          <Property Name="CognitiveEnhancementID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentID" Type="smallint" />
+          <Property Name="StudentFirstName" Type="varchar" MaxLength="30" />
+          <Property Name="StudentLastName" Type="varchar" MaxLength="30" />
+          <Property Name="EvaluationYear" Type="smallint" />
+          <Property Name="EvaluationPeriod" Type="char" MaxLength="10" />
+          <Property Name="EvaluationSt" Type="varchar" MaxLength="15" />
+          <Property Name="Kazanım1" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım2" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım3" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım4" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım5" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım6" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım7" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım8" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım9" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım10" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım11" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım12" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım13" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım14" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım15" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım16" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım17" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım18" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım19" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım20" Type="varchar" MaxLength="600" />
+          <Property Name="Kazanım21" Type="varchar" MaxLength="600" />
+          <Property Name="MySuggestion" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Table_CognitiveContent">
+          <Key>
+            <PropertyRef Name="CognitiveContentID" />
+          </Key>
+          <Property Name="CognitiveContentID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CognitiveGain1" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain2" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain3" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain4" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain5" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain6" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain7" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain8" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain9" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain10" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain11" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain12" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain13" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain14" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain15" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain16" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain17" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain18" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain19" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain20" Type="varchar" MaxLength="300" />
+          <Property Name="CognitiveGain21" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Table_G_Information">
+          <Key>
+            <PropertyRef Name="GI_InformationID" />
+          </Key>
+          <Property Name="GI_InformationID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentID" Type="smallint" />
+          <Property Name="GI_FirstName" Type="varchar" MaxLength="30" />
+          <Property Name="GI_LastName" Type="varchar" MaxLength="30" />
+          <Property Name="GI_Gender" Type="bit" />
+          <Property Name="GI_Age" Type="tinyint" />
+          <Property Name="GI_Height" Type="tinyint" />
+          <Property Name="GI_Weight" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="GI_HealthStatus" Type="varchar" MaxLength="150" />
+          <Property Name="GI_YearAsMonth" Type="varchar" MaxLength="8" />
+          <Property Name="GI_FamilyStatus" Type="bit" />
+          <Property Name="GI_MotherName" Type="varchar" MaxLength="30" />
+          <Property Name="GI_MotherPhone" Type="char" MaxLength="11" />
+          <Property Name="GI_FatherName" Type="varchar" MaxLength="30" />
+          <Property Name="GI_FatherPhone" Type="char" MaxLength="11" />
+          <Property Name="GI_EmergencyName" Type="varchar" MaxLength="30" />
+          <Property Name="GI_EmergencyPhone" Type="char" MaxLength="11" />
+          <Property Name="GI_Province" Type="varchar" MaxLength="14" />
+          <Property Name="GI_District" Type="varchar" MaxLength="14" />
+          <Property Name="GI_Address" Type="varchar" MaxLength="100" />
+          <Property Name="GI_SpeciaInformation" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Table_General_Evaluation">
+          <Key>
+            <PropertyRef Name="EvaluationID" />
+          </Key>
+          <Property Name="EvaluationID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentID" Type="smallint" Nullable="false" />
+          <Property Name="EvaluationYear" Type="smallint" />
+          <Property Name="EvaluationPeriod" Type="char" MaxLength="10" />
+          <Property Name="CognitiveEnhancement" Type="varchar" MaxLength="500" />
+          <Property Name="LanguageDevelopment" Type="varchar" MaxLength="500" />
+          <Property Name="MotorDevelopment" Type="varchar" MaxLength="500" />
+          <Property Name="SelfCareAbility" Type="varchar" MaxLength="500" />
+          <Property Name="SocialEmotionalDevelopment" Type="varchar" MaxLength="500" />
+          <Property Name="GeneralEvaluation1" Type="varchar" MaxLength="500" />
+          <Property Name="Suggestion1" Type="varchar" MaxLength="500" />
+          <Property Name="EvaluationDate1" Type="date" />
+          <Property Name="GeneralEvaluation2" Type="varchar" MaxLength="500" />
+          <Property Name="Suggestion2" Type="varchar" MaxLength="500" />
+          <Property Name="EvaluationDate2" Type="date" />
+          <Property Name="FinalEvaluation" Type="varchar" MaxLength="500" />
+          <Property Name="FinalSuggestion" Type="varchar" MaxLength="500" />
+          <Property Name="FinalDate" Type="date" />
+        </EntityType>
+        <EntityType Name="Table_Language_Development">
+          <Key>
+            <PropertyRef Name="LanguageDevelopmentID" />
+          </Key>
+          <Property Name="LanguageDevelopmentID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentID" Type="smallint" />
+          <Property Name="StudentFullName" Type="varchar" MaxLength="30" />
+          <Property Name="EvaluationYear" Type="smallint" />
+          <Property Name="EvaluationPeriod" Type="char" MaxLength="10" />
+          <Property Name="EvaluationSt" Type="varchar" MaxLength="25" />
+          <Property Name="Kazanım1" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım2" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım3" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım4" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım5" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım6" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım7" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım8" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım9" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım10" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım11" Type="varchar" MaxLength="400" />
+          <Property Name="Kazanım12" Type="varchar" MaxLength="400" />
+          <Property Name="MySuggestion" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Table_LanguageContent">
+          <Key>
+            <PropertyRef Name="LanguageContentID" />
+          </Key>
+          <Property Name="LanguageContentID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LanguageGain1" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain2" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain3" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain4" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain5" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain6" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain7" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain8" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain9" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain10" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain11" Type="varchar" MaxLength="200" />
+          <Property Name="LanguageGain12" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Table_Motor_Development">
+          <Key>
+            <PropertyRef Name="MotoDevelopmentID" />
+          </Key>
+          <Property Name="MotoDevelopmentID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentID" Type="smallint" />
+          <Property Name="StudentFullName" Type="varchar" MaxLength="30" />
+          <Property Name="EvaluationYear" Type="smallint" />
+          <Property Name="EvaluationPeriod" Type="char" MaxLength="10" />
+          <Property Name="EvaluationSt" Type="varchar" MaxLength="15" />
+          <Property Name="Kazanım1" Type="varchar" MaxLength="700" />
+          <Property Name="Kazanım2" Type="varchar" MaxLength="700" />
+          <Property Name="Kazanım3" Type="varchar" MaxLength="700" />
+          <Property Name="Kazanım4" Type="varchar" MaxLength="700" />
+          <Property Name="Kazanım5" Type="varchar" MaxLength="700" />
+          <Property Name="MySuggestion" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_MotorContent">
+          <Key>
+            <PropertyRef Name="MotorContentID" />
+          </Key>
+          <Property Name="MotorContentID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MotorGain1" Type="varchar" MaxLength="200" />
+          <Property Name="MotorGain2" Type="varchar" MaxLength="200" />
+          <Property Name="MotorGain3" Type="varchar" MaxLength="200" />
+          <Property Name="MotorGain4" Type="varchar" MaxLength="200" />
+          <Property Name="MotorGain5" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Table_Picture">
+          <Key>
+            <PropertyRef Name="PictureID" />
+          </Key>
+          <Property Name="PictureID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Picture" Type="nvarchar" MaxLength="250" />
+          <Property Name="ActivityID" Type="smallint" />
+          <Property Name="SliderOrder" Type="smallint" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="Table_SelfCareAbility">
+          <Key>
+            <PropertyRef Name="SelfCareAbilityID" />
+          </Key>
+          <Property Name="SelfCareAbilityID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentID" Type="smallint" Nullable="false" />
+          <Property Name="StudentFullName" Type="varchar" MaxLength="30" />
+          <Property Name="EvaluationYear" Type="smallint" />
+          <Property Name="EvaluationPeriod" Type="char" MaxLength="10" />
+          <Property Name="EvaluationSt" Type="varchar" MaxLength="25" />
+          <Property Name="Kazanım1" Type="varchar" MaxLength="500" />
+          <Property Name="Kazanım2" Type="varchar" MaxLength="500" />
+          <Property Name="Kazanım3" Type="varchar" MaxLength="500" />
+          <Property Name="Kazanım4" Type="varchar" MaxLength="500" />
+          <Property Name="Kazanım5" Type="varchar" MaxLength="500" />
+          <Property Name="Kazanım6" Type="varchar" MaxLength="500" />
+          <Property Name="Kazanım7" Type="varchar" MaxLength="500" />
+          <Property Name="Kazanım8" Type="varchar" MaxLength="500" />
+          <Property Name="MySuggestion" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Table_SelfCareAbilityContent">
+          <Key>
+            <PropertyRef Name="SelfCareAbilityContentID" />
+          </Key>
+          <Property Name="SelfCareAbilityContentID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SelfCareAbilityGain1" Type="varchar" MaxLength="200" />
+          <Property Name="SelfCareAbilityGain2" Type="varchar" MaxLength="200" />
+          <Property Name="SelfCareAbilityGain3" Type="varchar" MaxLength="200" />
+          <Property Name="SelfCareAbilityGain4" Type="varchar" MaxLength="200" />
+          <Property Name="SelfCareAbilityGain5" Type="varchar" MaxLength="200" />
+          <Property Name="SelfCareAbilityGain6" Type="varchar" MaxLength="200" />
+          <Property Name="SelfCareAbilityGain7" Type="varchar" MaxLength="200" />
+          <Property Name="SelfCareAbilityGain8" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Table_SocialEmitionalContent">
+          <Key>
+            <PropertyRef Name="SocialEmotionalContentID" />
+          </Key>
+          <Property Name="SocialEmotionalContentID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SocialEmotionalContent1" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent2" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent3" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent4" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent5" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent6" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent7" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent8" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent9" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent10" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent11" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent12" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent13" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent14" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent15" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent16" Type="varchar" MaxLength="200" />
+          <Property Name="SocialEmotionalContent17" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Table_SocialEmotionalDevelopment">
+          <Key>
+            <PropertyRef Name="SocialEmotionalDevelopmentID" />
+          </Key>
+          <Property Name="SocialEmotionalDevelopmentID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentID" Type="smallint" />
+          <Property Name="StudentFullName" Type="varchar" MaxLength="30" />
+          <Property Name="EvaluationYear" Type="smallint" />
+          <Property Name="EvaluationPeriod" Type="char" MaxLength="10" />
+          <Property Name="EvaluationSt" Type="varchar" MaxLength="25" />
+          <Property Name="Kazanım1" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım2" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım3" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım4" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım5" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım6" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım7" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım8" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım9" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım10" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım11" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım12" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım13" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım14" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım15" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım16" Type="varchar" MaxLength="300" />
+          <Property Name="Kazanım17" Type="varchar" MaxLength="300" />
+          <Property Name="MySuggestion" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Table_Student">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="smallint" Nullable="false" />
+          <Property Name="StudentFirstName" Type="varchar" MaxLength="20" />
+          <Property Name="StudentLastName" Type="varchar" MaxLength="20" />
+          <Property Name="StudentYearAsMonth" Type="varchar" MaxLength="8" />
+          <Property Name="StudentPicture" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <Association Name="FK_Table_Cognitive_Enhancement_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="0..1" />
+          <End Role="Table_Cognitive_Enhancement" Type="Self.Table_Cognitive_Enhancement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_Cognitive_Enhancement">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_G_Information_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="0..1" />
+          <End Role="Table_G_Information" Type="Self.Table_G_Information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_G_Information">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_General_Evaluation_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="1" />
+          <End Role="Table_General_Evaluation" Type="Self.Table_General_Evaluation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_General_Evaluation">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_Language_Development_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="0..1" />
+          <End Role="Table_Language_Development" Type="Self.Table_Language_Development" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_Language_Development">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_Motor_Development_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="0..1" />
+          <End Role="Table_Motor_Development" Type="Self.Table_Motor_Development" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_Motor_Development">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_SelfCareAbility_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="1" />
+          <End Role="Table_SelfCareAbility" Type="Self.Table_SelfCareAbility" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_SelfCareAbility">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_SocialEmotionalDevelopment_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="0..1" />
+          <End Role="Table_SocialEmotionalDevelopment" Type="Self.Table_SocialEmotionalDevelopment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_SocialEmotionalDevelopment">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Cocuk_Gelisimi_DbModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_About" EntityType="Self.Table_About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Activity" EntityType="Self.Table_Activity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Cognitive_Enhancement" EntityType="Self.Table_Cognitive_Enhancement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_CognitiveContent" EntityType="Self.Table_CognitiveContent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_G_Information" EntityType="Self.Table_G_Information" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_General_Evaluation" EntityType="Self.Table_General_Evaluation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Language_Development" EntityType="Self.Table_Language_Development" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_LanguageContent" EntityType="Self.Table_LanguageContent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Motor_Development" EntityType="Self.Table_Motor_Development" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_MotorContent" EntityType="Self.Table_MotorContent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Picture" EntityType="Self.Table_Picture" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_SelfCareAbility" EntityType="Self.Table_SelfCareAbility" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_SelfCareAbilityContent" EntityType="Self.Table_SelfCareAbilityContent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_SocialEmitionalContent" EntityType="Self.Table_SocialEmitionalContent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_SocialEmotionalDevelopment" EntityType="Self.Table_SocialEmotionalDevelopment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Student" EntityType="Self.Table_Student" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Table_Cognitive_Enhancement_Table_Student" Association="Self.FK_Table_Cognitive_Enhancement_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_Cognitive_Enhancement" EntitySet="Table_Cognitive_Enhancement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_G_Information_Table_Student" Association="Self.FK_Table_G_Information_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_G_Information" EntitySet="Table_G_Information" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_General_Evaluation_Table_Student" Association="Self.FK_Table_General_Evaluation_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_General_Evaluation" EntitySet="Table_General_Evaluation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_Language_Development_Table_Student" Association="Self.FK_Table_Language_Development_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_Language_Development" EntitySet="Table_Language_Development" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_Motor_Development_Table_Student" Association="Self.FK_Table_Motor_Development_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_Motor_Development" EntitySet="Table_Motor_Development" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_SelfCareAbility_Table_Student" Association="Self.FK_Table_SelfCareAbility_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_SelfCareAbility" EntitySet="Table_SelfCareAbility" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_SocialEmotionalDevelopment_Table_Student" Association="Self.FK_Table_SocialEmotionalDevelopment_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_SocialEmotionalDevelopment" EntitySet="Table_SocialEmotionalDevelopment" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Cocuk_Gelisimi_DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Table_About">
+          <Key>
+            <PropertyRef Name="AboutMeID" />
+          </Key>
+          <Property Name="AboutMeID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MyName" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="MySurname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MyPhoneNumber" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="MyEmail" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="MyTwitterLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="MyInstagramLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="MyFacebookLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="MyYoutubeLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="MyLinkedInLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="MyAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="AboutMe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MyPicture" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Table_Activity">
+          <Key>
+            <PropertyRef Name="ActivityID" />
+          </Key>
+          <Property Name="ActivityID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ActiviyName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ActivityExplanation" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Table_Cognitive_Enhancement">
+          <Key>
+            <PropertyRef Name="CognitiveEnhancementID" />
+          </Key>
+          <Property Name="CognitiveEnhancementID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int16" />
+          <Property Name="EvaluationYear" Type="Int16" />
+          <Property Name="EvaluationPeriod" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="EvaluationSt" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım1" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım2" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım3" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım4" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım5" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım6" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım7" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım8" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım9" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım10" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım11" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım12" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım13" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım14" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım15" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım16" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım17" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım18" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım19" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım20" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım21" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="MySuggestion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Table_Student" Relationship="Self.FK_Table_Cognitive_Enhancement_Table_Student" FromRole="Table_Cognitive_Enhancement" ToRole="Table_Student" />
+          <Property Name="StudentFirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="StudentLastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table_CognitiveContent">
+          <Key>
+            <PropertyRef Name="CognitiveContentID" />
+          </Key>
+          <Property Name="CognitiveContentID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CognitiveGain1" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain2" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain3" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain4" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain5" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain6" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain7" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain8" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain9" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain10" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain11" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain12" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain13" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain14" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain15" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain16" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain17" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain18" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain19" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain20" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CognitiveGain21" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table_G_Information">
+          <Key>
+            <PropertyRef Name="GI_InformationID" />
+          </Key>
+          <Property Name="GI_InformationID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int16" />
+          <Property Name="GI_FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="GI_LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="GI_Gender" Type="Boolean" />
+          <Property Name="GI_Age" Type="Byte" />
+          <Property Name="GI_Height" Type="Byte" />
+          <Property Name="GI_Weight" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="GI_HealthStatus" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="GI_YearAsMonth" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="GI_FamilyStatus" Type="Boolean" />
+          <Property Name="GI_MotherName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="GI_MotherPhone" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="GI_FatherName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="GI_FatherPhone" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="GI_EmergencyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="GI_EmergencyPhone" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="GI_Province" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="GI_District" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="GI_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GI_SpeciaInformation" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Table_Student" Relationship="Self.FK_Table_G_Information_Table_Student" FromRole="Table_G_Information" ToRole="Table_Student" />
+        </EntityType>
+        <EntityType Name="Table_General_Evaluation">
+          <Key>
+            <PropertyRef Name="EvaluationID" />
+          </Key>
+          <Property Name="EvaluationID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int16" Nullable="false" />
+          <Property Name="EvaluationYear" Type="Int16" />
+          <Property Name="EvaluationPeriod" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CognitiveEnhancement" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageDevelopment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MotorDevelopment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SelfCareAbility" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalDevelopment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="GeneralEvaluation1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Suggestion1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="EvaluationDate1" Type="DateTime" Precision="0" />
+          <Property Name="GeneralEvaluation2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Suggestion2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="EvaluationDate2" Type="DateTime" Precision="0" />
+          <Property Name="FinalEvaluation" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FinalSuggestion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FinalDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Table_Student" Relationship="Self.FK_Table_General_Evaluation_Table_Student" FromRole="Table_General_Evaluation" ToRole="Table_Student" />
+        </EntityType>
+        <EntityType Name="Table_Language_Development">
+          <Key>
+            <PropertyRef Name="LanguageDevelopmentID" />
+          </Key>
+          <Property Name="LanguageDevelopmentID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int16" />
+          <Property Name="StudentFullName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EvaluationYear" Type="Int16" />
+          <Property Name="EvaluationPeriod" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="EvaluationSt" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım1" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım2" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım3" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım4" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım5" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım6" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım7" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım8" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım9" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım10" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım11" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım12" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="MySuggestion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Table_Student" Relationship="Self.FK_Table_Language_Development_Table_Student" FromRole="Table_Language_Development" ToRole="Table_Student" />
+        </EntityType>
+        <EntityType Name="Table_LanguageContent">
+          <Key>
+            <PropertyRef Name="LanguageContentID" />
+          </Key>
+          <Property Name="LanguageContentID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LanguageGain1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain6" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain7" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain8" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain9" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain10" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain11" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageGain12" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table_Motor_Development">
+          <Key>
+            <PropertyRef Name="MotoDevelopmentID" />
+          </Key>
+          <Property Name="MotoDevelopmentID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int16" />
+          <Property Name="StudentFullName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EvaluationYear" Type="Int16" />
+          <Property Name="EvaluationPeriod" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="EvaluationSt" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım1" Type="String" MaxLength="700" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım2" Type="String" MaxLength="700" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım3" Type="String" MaxLength="700" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım4" Type="String" MaxLength="700" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım5" Type="String" MaxLength="700" FixedLength="false" Unicode="false" />
+          <Property Name="MySuggestion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Table_Student" Relationship="Self.FK_Table_Motor_Development_Table_Student" FromRole="Table_Motor_Development" ToRole="Table_Student" />
+        </EntityType>
+        <EntityType Name="Table_MotorContent">
+          <Key>
+            <PropertyRef Name="MotorContentID" />
+          </Key>
+          <Property Name="MotorContentID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MotorGain1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MotorGain2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MotorGain3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MotorGain4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MotorGain5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table_Picture">
+          <Key>
+            <PropertyRef Name="PictureID" />
+          </Key>
+          <Property Name="PictureID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Picture" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ActivityID" Type="Int16" />
+          <Property Name="SliderOrder" Type="Int16" />
+          <Property Name="Status" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Table_SelfCareAbility">
+          <Key>
+            <PropertyRef Name="SelfCareAbilityID" />
+          </Key>
+          <Property Name="SelfCareAbilityID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int16" Nullable="false" />
+          <Property Name="StudentFullName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EvaluationYear" Type="Int16" />
+          <Property Name="EvaluationPeriod" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="EvaluationSt" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım3" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım4" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım5" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım6" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım7" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım8" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MySuggestion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Table_Student" Relationship="Self.FK_Table_SelfCareAbility_Table_Student" FromRole="Table_SelfCareAbility" ToRole="Table_Student" />
+        </EntityType>
+        <EntityType Name="Table_SelfCareAbilityContent">
+          <Key>
+            <PropertyRef Name="SelfCareAbilityContentID" />
+          </Key>
+          <Property Name="SelfCareAbilityContentID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SelfCareAbilityGain1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SelfCareAbilityGain2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SelfCareAbilityGain3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SelfCareAbilityGain4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SelfCareAbilityGain5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SelfCareAbilityGain6" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SelfCareAbilityGain7" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SelfCareAbilityGain8" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table_SocialEmitionalContent">
+          <Key>
+            <PropertyRef Name="SocialEmotionalContentID" />
+          </Key>
+          <Property Name="SocialEmotionalContentID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SocialEmotionalContent1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent6" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent7" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent8" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent9" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent10" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent11" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent12" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent13" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent14" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent15" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent16" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocialEmotionalContent17" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table_SocialEmotionalDevelopment">
+          <Key>
+            <PropertyRef Name="SocialEmotionalDevelopmentID" />
+          </Key>
+          <Property Name="SocialEmotionalDevelopmentID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int16" />
+          <Property Name="StudentFullName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EvaluationYear" Type="Int16" />
+          <Property Name="EvaluationPeriod" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="EvaluationSt" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım1" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım2" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım3" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım4" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım5" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım6" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım7" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım8" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım9" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım10" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım11" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım12" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım13" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım14" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım15" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım16" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Kazanım17" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="MySuggestion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Table_Student" Relationship="Self.FK_Table_SocialEmotionalDevelopment_Table_Student" FromRole="Table_SocialEmotionalDevelopment" ToRole="Table_Student" />
+        </EntityType>
+        <EntityType Name="Table_Student">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="Int16" Nullable="false" />
+          <Property Name="StudentFirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="StudentLastName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="StudentYearAsMonth" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="StudentPicture" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Table_Cognitive_Enhancement" Relationship="Self.FK_Table_Cognitive_Enhancement_Table_Student" FromRole="Table_Student" ToRole="Table_Cognitive_Enhancement" />
+          <NavigationProperty Name="Table_G_Information" Relationship="Self.FK_Table_G_Information_Table_Student" FromRole="Table_Student" ToRole="Table_G_Information" />
+          <NavigationProperty Name="Table_General_Evaluation" Relationship="Self.FK_Table_General_Evaluation_Table_Student" FromRole="Table_Student" ToRole="Table_General_Evaluation" />
+          <NavigationProperty Name="Table_Language_Development" Relationship="Self.FK_Table_Language_Development_Table_Student" FromRole="Table_Student" ToRole="Table_Language_Development" />
+          <NavigationProperty Name="Table_Motor_Development" Relationship="Self.FK_Table_Motor_Development_Table_Student" FromRole="Table_Student" ToRole="Table_Motor_Development" />
+          <NavigationProperty Name="Table_SelfCareAbility" Relationship="Self.FK_Table_SelfCareAbility_Table_Student" FromRole="Table_Student" ToRole="Table_SelfCareAbility" />
+          <NavigationProperty Name="Table_SocialEmotionalDevelopment" Relationship="Self.FK_Table_SocialEmotionalDevelopment_Table_Student" FromRole="Table_Student" ToRole="Table_SocialEmotionalDevelopment" />
+        </EntityType>
+        <Association Name="FK_Table_Cognitive_Enhancement_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="0..1" />
+          <End Role="Table_Cognitive_Enhancement" Type="Self.Table_Cognitive_Enhancement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_Cognitive_Enhancement">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_G_Information_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="0..1" />
+          <End Role="Table_G_Information" Type="Self.Table_G_Information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_G_Information">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_General_Evaluation_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="1" />
+          <End Role="Table_General_Evaluation" Type="Self.Table_General_Evaluation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_General_Evaluation">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_Language_Development_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="0..1" />
+          <End Role="Table_Language_Development" Type="Self.Table_Language_Development" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_Language_Development">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_Motor_Development_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="0..1" />
+          <End Role="Table_Motor_Development" Type="Self.Table_Motor_Development" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_Motor_Development">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_SelfCareAbility_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="1" />
+          <End Role="Table_SelfCareAbility" Type="Self.Table_SelfCareAbility" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_SelfCareAbility">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_SocialEmotionalDevelopment_Table_Student">
+          <End Role="Table_Student" Type="Self.Table_Student" Multiplicity="0..1" />
+          <End Role="Table_SocialEmotionalDevelopment" Type="Self.Table_SocialEmotionalDevelopment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Table_SocialEmotionalDevelopment">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Cocuk_Gelisimi_DbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Table_About" EntityType="Self.Table_About" />
+          <EntitySet Name="Table_Activity" EntityType="Self.Table_Activity" />
+          <EntitySet Name="Table_Cognitive_Enhancement" EntityType="Self.Table_Cognitive_Enhancement" />
+          <EntitySet Name="Table_CognitiveContent" EntityType="Self.Table_CognitiveContent" />
+          <EntitySet Name="Table_G_Information" EntityType="Self.Table_G_Information" />
+          <EntitySet Name="Table_General_Evaluation" EntityType="Self.Table_General_Evaluation" />
+          <EntitySet Name="Table_Language_Development" EntityType="Self.Table_Language_Development" />
+          <EntitySet Name="Table_LanguageContent" EntityType="Self.Table_LanguageContent" />
+          <EntitySet Name="Table_Motor_Development" EntityType="Self.Table_Motor_Development" />
+          <EntitySet Name="Table_MotorContent" EntityType="Self.Table_MotorContent" />
+          <EntitySet Name="Table_Picture" EntityType="Self.Table_Picture" />
+          <EntitySet Name="Table_SelfCareAbility" EntityType="Self.Table_SelfCareAbility" />
+          <EntitySet Name="Table_SelfCareAbilityContent" EntityType="Self.Table_SelfCareAbilityContent" />
+          <EntitySet Name="Table_SocialEmitionalContent" EntityType="Self.Table_SocialEmitionalContent" />
+          <EntitySet Name="Table_SocialEmotionalDevelopment" EntityType="Self.Table_SocialEmotionalDevelopment" />
+          <EntitySet Name="Table_Student" EntityType="Self.Table_Student" />
+          <AssociationSet Name="FK_Table_Cognitive_Enhancement_Table_Student" Association="Self.FK_Table_Cognitive_Enhancement_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_Cognitive_Enhancement" EntitySet="Table_Cognitive_Enhancement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_G_Information_Table_Student" Association="Self.FK_Table_G_Information_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_G_Information" EntitySet="Table_G_Information" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_General_Evaluation_Table_Student" Association="Self.FK_Table_General_Evaluation_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_General_Evaluation" EntitySet="Table_General_Evaluation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_Language_Development_Table_Student" Association="Self.FK_Table_Language_Development_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_Language_Development" EntitySet="Table_Language_Development" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_Motor_Development_Table_Student" Association="Self.FK_Table_Motor_Development_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_Motor_Development" EntitySet="Table_Motor_Development" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_SelfCareAbility_Table_Student" Association="Self.FK_Table_SelfCareAbility_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_SelfCareAbility" EntitySet="Table_SelfCareAbility" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_SocialEmotionalDevelopment_Table_Student" Association="Self.FK_Table_SocialEmotionalDevelopment_Table_Student">
+            <End Role="Table_Student" EntitySet="Table_Student" />
+            <End Role="Table_SocialEmotionalDevelopment" EntitySet="Table_SocialEmotionalDevelopment" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Cocuk_Gelisimi_DbModelStoreContainer" CdmEntityContainer="Cocuk_Gelisimi_DbEntities1">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_About">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_About">
+              <MappingFragment StoreEntitySet="Table_About">
+                <ScalarProperty Name="AboutMeID" ColumnName="AboutMeID" />
+                <ScalarProperty Name="MyName" ColumnName="MyName" />
+                <ScalarProperty Name="MySurname" ColumnName="MySurname" />
+                <ScalarProperty Name="MyPhoneNumber" ColumnName="MyPhoneNumber" />
+                <ScalarProperty Name="MyEmail" ColumnName="MyEmail" />
+                <ScalarProperty Name="MyTwitterLink" ColumnName="MyTwitterLink" />
+                <ScalarProperty Name="MyInstagramLink" ColumnName="MyInstagramLink" />
+                <ScalarProperty Name="MyFacebookLink" ColumnName="MyFacebookLink" />
+                <ScalarProperty Name="MyYoutubeLink" ColumnName="MyYoutubeLink" />
+                <ScalarProperty Name="MyLinkedInLink" ColumnName="MyLinkedInLink" />
+                <ScalarProperty Name="MyAddress" ColumnName="MyAddress" />
+                <ScalarProperty Name="AboutMe" ColumnName="AboutMe" />
+                <ScalarProperty Name="MyPicture" ColumnName="MyPicture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Activity">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_Activity">
+              <MappingFragment StoreEntitySet="Table_Activity">
+                <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+                <ScalarProperty Name="ActiviyName" ColumnName="ActiviyName" />
+                <ScalarProperty Name="ActivityExplanation" ColumnName="ActivityExplanation" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Cognitive_Enhancement">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_Cognitive_Enhancement">
+              <MappingFragment StoreEntitySet="Table_Cognitive_Enhancement">
+                <ScalarProperty Name="StudentLastName" ColumnName="StudentLastName" />
+                <ScalarProperty Name="StudentFirstName" ColumnName="StudentFirstName" />
+                <ScalarProperty Name="CognitiveEnhancementID" ColumnName="CognitiveEnhancementID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="EvaluationYear" ColumnName="EvaluationYear" />
+                <ScalarProperty Name="EvaluationPeriod" ColumnName="EvaluationPeriod" />
+                <ScalarProperty Name="EvaluationSt" ColumnName="EvaluationSt" />
+                <ScalarProperty Name="Kazanım1" ColumnName="Kazanım1" />
+                <ScalarProperty Name="Kazanım2" ColumnName="Kazanım2" />
+                <ScalarProperty Name="Kazanım3" ColumnName="Kazanım3" />
+                <ScalarProperty Name="Kazanım4" ColumnName="Kazanım4" />
+                <ScalarProperty Name="Kazanım5" ColumnName="Kazanım5" />
+                <ScalarProperty Name="Kazanım6" ColumnName="Kazanım6" />
+                <ScalarProperty Name="Kazanım7" ColumnName="Kazanım7" />
+                <ScalarProperty Name="Kazanım8" ColumnName="Kazanım8" />
+                <ScalarProperty Name="Kazanım9" ColumnName="Kazanım9" />
+                <ScalarProperty Name="Kazanım10" ColumnName="Kazanım10" />
+                <ScalarProperty Name="Kazanım11" ColumnName="Kazanım11" />
+                <ScalarProperty Name="Kazanım12" ColumnName="Kazanım12" />
+                <ScalarProperty Name="Kazanım13" ColumnName="Kazanım13" />
+                <ScalarProperty Name="Kazanım14" ColumnName="Kazanım14" />
+                <ScalarProperty Name="Kazanım15" ColumnName="Kazanım15" />
+                <ScalarProperty Name="Kazanım16" ColumnName="Kazanım16" />
+                <ScalarProperty Name="Kazanım17" ColumnName="Kazanım17" />
+                <ScalarProperty Name="Kazanım18" ColumnName="Kazanım18" />
+                <ScalarProperty Name="Kazanım19" ColumnName="Kazanım19" />
+                <ScalarProperty Name="Kazanım20" ColumnName="Kazanım20" />
+                <ScalarProperty Name="Kazanım21" ColumnName="Kazanım21" />
+                <ScalarProperty Name="MySuggestion" ColumnName="MySuggestion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_CognitiveContent">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_CognitiveContent">
+              <MappingFragment StoreEntitySet="Table_CognitiveContent">
+                <ScalarProperty Name="CognitiveContentID" ColumnName="CognitiveContentID" />
+                <ScalarProperty Name="CognitiveGain1" ColumnName="CognitiveGain1" />
+                <ScalarProperty Name="CognitiveGain2" ColumnName="CognitiveGain2" />
+                <ScalarProperty Name="CognitiveGain3" ColumnName="CognitiveGain3" />
+                <ScalarProperty Name="CognitiveGain4" ColumnName="CognitiveGain4" />
+                <ScalarProperty Name="CognitiveGain5" ColumnName="CognitiveGain5" />
+                <ScalarProperty Name="CognitiveGain6" ColumnName="CognitiveGain6" />
+                <ScalarProperty Name="CognitiveGain7" ColumnName="CognitiveGain7" />
+                <ScalarProperty Name="CognitiveGain8" ColumnName="CognitiveGain8" />
+                <ScalarProperty Name="CognitiveGain9" ColumnName="CognitiveGain9" />
+                <ScalarProperty Name="CognitiveGain10" ColumnName="CognitiveGain10" />
+                <ScalarProperty Name="CognitiveGain11" ColumnName="CognitiveGain11" />
+                <ScalarProperty Name="CognitiveGain12" ColumnName="CognitiveGain12" />
+                <ScalarProperty Name="CognitiveGain13" ColumnName="CognitiveGain13" />
+                <ScalarProperty Name="CognitiveGain14" ColumnName="CognitiveGain14" />
+                <ScalarProperty Name="CognitiveGain15" ColumnName="CognitiveGain15" />
+                <ScalarProperty Name="CognitiveGain16" ColumnName="CognitiveGain16" />
+                <ScalarProperty Name="CognitiveGain17" ColumnName="CognitiveGain17" />
+                <ScalarProperty Name="CognitiveGain18" ColumnName="CognitiveGain18" />
+                <ScalarProperty Name="CognitiveGain19" ColumnName="CognitiveGain19" />
+                <ScalarProperty Name="CognitiveGain20" ColumnName="CognitiveGain20" />
+                <ScalarProperty Name="CognitiveGain21" ColumnName="CognitiveGain21" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_G_Information">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_G_Information">
+              <MappingFragment StoreEntitySet="Table_G_Information">
+                <ScalarProperty Name="GI_InformationID" ColumnName="GI_InformationID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="GI_FirstName" ColumnName="GI_FirstName" />
+                <ScalarProperty Name="GI_LastName" ColumnName="GI_LastName" />
+                <ScalarProperty Name="GI_Gender" ColumnName="GI_Gender" />
+                <ScalarProperty Name="GI_Age" ColumnName="GI_Age" />
+                <ScalarProperty Name="GI_Height" ColumnName="GI_Height" />
+                <ScalarProperty Name="GI_Weight" ColumnName="GI_Weight" />
+                <ScalarProperty Name="GI_HealthStatus" ColumnName="GI_HealthStatus" />
+                <ScalarProperty Name="GI_YearAsMonth" ColumnName="GI_YearAsMonth" />
+                <ScalarProperty Name="GI_FamilyStatus" ColumnName="GI_FamilyStatus" />
+                <ScalarProperty Name="GI_MotherName" ColumnName="GI_MotherName" />
+                <ScalarProperty Name="GI_MotherPhone" ColumnName="GI_MotherPhone" />
+                <ScalarProperty Name="GI_FatherName" ColumnName="GI_FatherName" />
+                <ScalarProperty Name="GI_FatherPhone" ColumnName="GI_FatherPhone" />
+                <ScalarProperty Name="GI_EmergencyName" ColumnName="GI_EmergencyName" />
+                <ScalarProperty Name="GI_EmergencyPhone" ColumnName="GI_EmergencyPhone" />
+                <ScalarProperty Name="GI_Province" ColumnName="GI_Province" />
+                <ScalarProperty Name="GI_District" ColumnName="GI_District" />
+                <ScalarProperty Name="GI_Address" ColumnName="GI_Address" />
+                <ScalarProperty Name="GI_SpeciaInformation" ColumnName="GI_SpeciaInformation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_General_Evaluation">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_General_Evaluation">
+              <MappingFragment StoreEntitySet="Table_General_Evaluation">
+                <ScalarProperty Name="EvaluationID" ColumnName="EvaluationID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="EvaluationYear" ColumnName="EvaluationYear" />
+                <ScalarProperty Name="EvaluationPeriod" ColumnName="EvaluationPeriod" />
+                <ScalarProperty Name="CognitiveEnhancement" ColumnName="CognitiveEnhancement" />
+                <ScalarProperty Name="LanguageDevelopment" ColumnName="LanguageDevelopment" />
+                <ScalarProperty Name="MotorDevelopment" ColumnName="MotorDevelopment" />
+                <ScalarProperty Name="SelfCareAbility" ColumnName="SelfCareAbility" />
+                <ScalarProperty Name="SocialEmotionalDevelopment" ColumnName="SocialEmotionalDevelopment" />
+                <ScalarProperty Name="GeneralEvaluation1" ColumnName="GeneralEvaluation1" />
+                <ScalarProperty Name="Suggestion1" ColumnName="Suggestion1" />
+                <ScalarProperty Name="EvaluationDate1" ColumnName="EvaluationDate1" />
+                <ScalarProperty Name="GeneralEvaluation2" ColumnName="GeneralEvaluation2" />
+                <ScalarProperty Name="Suggestion2" ColumnName="Suggestion2" />
+                <ScalarProperty Name="EvaluationDate2" ColumnName="EvaluationDate2" />
+                <ScalarProperty Name="FinalEvaluation" ColumnName="FinalEvaluation" />
+                <ScalarProperty Name="FinalSuggestion" ColumnName="FinalSuggestion" />
+                <ScalarProperty Name="FinalDate" ColumnName="FinalDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Language_Development">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_Language_Development">
+              <MappingFragment StoreEntitySet="Table_Language_Development">
+                <ScalarProperty Name="LanguageDevelopmentID" ColumnName="LanguageDevelopmentID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="StudentFullName" ColumnName="StudentFullName" />
+                <ScalarProperty Name="EvaluationYear" ColumnName="EvaluationYear" />
+                <ScalarProperty Name="EvaluationPeriod" ColumnName="EvaluationPeriod" />
+                <ScalarProperty Name="EvaluationSt" ColumnName="EvaluationSt" />
+                <ScalarProperty Name="Kazanım1" ColumnName="Kazanım1" />
+                <ScalarProperty Name="Kazanım2" ColumnName="Kazanım2" />
+                <ScalarProperty Name="Kazanım3" ColumnName="Kazanım3" />
+                <ScalarProperty Name="Kazanım4" ColumnName="Kazanım4" />
+                <ScalarProperty Name="Kazanım5" ColumnName="Kazanım5" />
+                <ScalarProperty Name="Kazanım6" ColumnName="Kazanım6" />
+                <ScalarProperty Name="Kazanım7" ColumnName="Kazanım7" />
+                <ScalarProperty Name="Kazanım8" ColumnName="Kazanım8" />
+                <ScalarProperty Name="Kazanım9" ColumnName="Kazanım9" />
+                <ScalarProperty Name="Kazanım10" ColumnName="Kazanım10" />
+                <ScalarProperty Name="Kazanım11" ColumnName="Kazanım11" />
+                <ScalarProperty Name="Kazanım12" ColumnName="Kazanım12" />
+                <ScalarProperty Name="MySuggestion" ColumnName="MySuggestion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_LanguageContent">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_LanguageContent">
+              <MappingFragment StoreEntitySet="Table_LanguageContent">
+                <ScalarProperty Name="LanguageContentID" ColumnName="LanguageContentID" />
+                <ScalarProperty Name="LanguageGain1" ColumnName="LanguageGain1" />
+                <ScalarProperty Name="LanguageGain2" ColumnName="LanguageGain2" />
+                <ScalarProperty Name="LanguageGain3" ColumnName="LanguageGain3" />
+                <ScalarProperty Name="LanguageGain4" ColumnName="LanguageGain4" />
+                <ScalarProperty Name="LanguageGain5" ColumnName="LanguageGain5" />
+                <ScalarProperty Name="LanguageGain6" ColumnName="LanguageGain6" />
+                <ScalarProperty Name="LanguageGain7" ColumnName="LanguageGain7" />
+                <ScalarProperty Name="LanguageGain8" ColumnName="LanguageGain8" />
+                <ScalarProperty Name="LanguageGain9" ColumnName="LanguageGain9" />
+                <ScalarProperty Name="LanguageGain10" ColumnName="LanguageGain10" />
+                <ScalarProperty Name="LanguageGain11" ColumnName="LanguageGain11" />
+                <ScalarProperty Name="LanguageGain12" ColumnName="LanguageGain12" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Motor_Development">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_Motor_Development">
+              <MappingFragment StoreEntitySet="Table_Motor_Development">
+                <ScalarProperty Name="MotoDevelopmentID" ColumnName="MotoDevelopmentID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="StudentFullName" ColumnName="StudentFullName" />
+                <ScalarProperty Name="EvaluationYear" ColumnName="EvaluationYear" />
+                <ScalarProperty Name="EvaluationPeriod" ColumnName="EvaluationPeriod" />
+                <ScalarProperty Name="EvaluationSt" ColumnName="EvaluationSt" />
+                <ScalarProperty Name="Kazanım1" ColumnName="Kazanım1" />
+                <ScalarProperty Name="Kazanım2" ColumnName="Kazanım2" />
+                <ScalarProperty Name="Kazanım3" ColumnName="Kazanım3" />
+                <ScalarProperty Name="Kazanım4" ColumnName="Kazanım4" />
+                <ScalarProperty Name="Kazanım5" ColumnName="Kazanım5" />
+                <ScalarProperty Name="MySuggestion" ColumnName="MySuggestion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_MotorContent">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_MotorContent">
+              <MappingFragment StoreEntitySet="Table_MotorContent">
+                <ScalarProperty Name="MotorContentID" ColumnName="MotorContentID" />
+                <ScalarProperty Name="MotorGain1" ColumnName="MotorGain1" />
+                <ScalarProperty Name="MotorGain2" ColumnName="MotorGain2" />
+                <ScalarProperty Name="MotorGain3" ColumnName="MotorGain3" />
+                <ScalarProperty Name="MotorGain4" ColumnName="MotorGain4" />
+                <ScalarProperty Name="MotorGain5" ColumnName="MotorGain5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Picture">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_Picture">
+              <MappingFragment StoreEntitySet="Table_Picture">
+                <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+                <ScalarProperty Name="SliderOrder" ColumnName="SliderOrder" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_SelfCareAbility">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_SelfCareAbility">
+              <MappingFragment StoreEntitySet="Table_SelfCareAbility">
+                <ScalarProperty Name="SelfCareAbilityID" ColumnName="SelfCareAbilityID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="StudentFullName" ColumnName="StudentFullName" />
+                <ScalarProperty Name="EvaluationYear" ColumnName="EvaluationYear" />
+                <ScalarProperty Name="EvaluationPeriod" ColumnName="EvaluationPeriod" />
+                <ScalarProperty Name="EvaluationSt" ColumnName="EvaluationSt" />
+                <ScalarProperty Name="Kazanım1" ColumnName="Kazanım1" />
+                <ScalarProperty Name="Kazanım2" ColumnName="Kazanım2" />
+                <ScalarProperty Name="Kazanım3" ColumnName="Kazanım3" />
+                <ScalarProperty Name="Kazanım4" ColumnName="Kazanım4" />
+                <ScalarProperty Name="Kazanım5" ColumnName="Kazanım5" />
+                <ScalarProperty Name="Kazanım6" ColumnName="Kazanım6" />
+                <ScalarProperty Name="Kazanım7" ColumnName="Kazanım7" />
+                <ScalarProperty Name="Kazanım8" ColumnName="Kazanım8" />
+                <ScalarProperty Name="MySuggestion" ColumnName="MySuggestion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_SelfCareAbilityContent">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_SelfCareAbilityContent">
+              <MappingFragment StoreEntitySet="Table_SelfCareAbilityContent">
+                <ScalarProperty Name="SelfCareAbilityContentID" ColumnName="SelfCareAbilityContentID" />
+                <ScalarProperty Name="SelfCareAbilityGain1" ColumnName="SelfCareAbilityGain1" />
+                <ScalarProperty Name="SelfCareAbilityGain2" ColumnName="SelfCareAbilityGain2" />
+                <ScalarProperty Name="SelfCareAbilityGain3" ColumnName="SelfCareAbilityGain3" />
+                <ScalarProperty Name="SelfCareAbilityGain4" ColumnName="SelfCareAbilityGain4" />
+                <ScalarProperty Name="SelfCareAbilityGain5" ColumnName="SelfCareAbilityGain5" />
+                <ScalarProperty Name="SelfCareAbilityGain6" ColumnName="SelfCareAbilityGain6" />
+                <ScalarProperty Name="SelfCareAbilityGain7" ColumnName="SelfCareAbilityGain7" />
+                <ScalarProperty Name="SelfCareAbilityGain8" ColumnName="SelfCareAbilityGain8" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_SocialEmitionalContent">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_SocialEmitionalContent">
+              <MappingFragment StoreEntitySet="Table_SocialEmitionalContent">
+                <ScalarProperty Name="SocialEmotionalContentID" ColumnName="SocialEmotionalContentID" />
+                <ScalarProperty Name="SocialEmotionalContent1" ColumnName="SocialEmotionalContent1" />
+                <ScalarProperty Name="SocialEmotionalContent2" ColumnName="SocialEmotionalContent2" />
+                <ScalarProperty Name="SocialEmotionalContent3" ColumnName="SocialEmotionalContent3" />
+                <ScalarProperty Name="SocialEmotionalContent4" ColumnName="SocialEmotionalContent4" />
+                <ScalarProperty Name="SocialEmotionalContent5" ColumnName="SocialEmotionalContent5" />
+                <ScalarProperty Name="SocialEmotionalContent6" ColumnName="SocialEmotionalContent6" />
+                <ScalarProperty Name="SocialEmotionalContent7" ColumnName="SocialEmotionalContent7" />
+                <ScalarProperty Name="SocialEmotionalContent8" ColumnName="SocialEmotionalContent8" />
+                <ScalarProperty Name="SocialEmotionalContent9" ColumnName="SocialEmotionalContent9" />
+                <ScalarProperty Name="SocialEmotionalContent10" ColumnName="SocialEmotionalContent10" />
+                <ScalarProperty Name="SocialEmotionalContent11" ColumnName="SocialEmotionalContent11" />
+                <ScalarProperty Name="SocialEmotionalContent12" ColumnName="SocialEmotionalContent12" />
+                <ScalarProperty Name="SocialEmotionalContent13" ColumnName="SocialEmotionalContent13" />
+                <ScalarProperty Name="SocialEmotionalContent14" ColumnName="SocialEmotionalContent14" />
+                <ScalarProperty Name="SocialEmotionalContent15" ColumnName="SocialEmotionalContent15" />
+                <ScalarProperty Name="SocialEmotionalContent16" ColumnName="SocialEmotionalContent16" />
+                <ScalarProperty Name="SocialEmotionalContent17" ColumnName="SocialEmotionalContent17" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_SocialEmotionalDevelopment">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_SocialEmotionalDevelopment">
+              <MappingFragment StoreEntitySet="Table_SocialEmotionalDevelopment">
+                <ScalarProperty Name="SocialEmotionalDevelopmentID" ColumnName="SocialEmotionalDevelopmentID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="StudentFullName" ColumnName="StudentFullName" />
+                <ScalarProperty Name="EvaluationYear" ColumnName="EvaluationYear" />
+                <ScalarProperty Name="EvaluationPeriod" ColumnName="EvaluationPeriod" />
+                <ScalarProperty Name="EvaluationSt" ColumnName="EvaluationSt" />
+                <ScalarProperty Name="Kazanım1" ColumnName="Kazanım1" />
+                <ScalarProperty Name="Kazanım2" ColumnName="Kazanım2" />
+                <ScalarProperty Name="Kazanım3" ColumnName="Kazanım3" />
+                <ScalarProperty Name="Kazanım4" ColumnName="Kazanım4" />
+                <ScalarProperty Name="Kazanım5" ColumnName="Kazanım5" />
+                <ScalarProperty Name="Kazanım6" ColumnName="Kazanım6" />
+                <ScalarProperty Name="Kazanım7" ColumnName="Kazanım7" />
+                <ScalarProperty Name="Kazanım8" ColumnName="Kazanım8" />
+                <ScalarProperty Name="Kazanım9" ColumnName="Kazanım9" />
+                <ScalarProperty Name="Kazanım10" ColumnName="Kazanım10" />
+                <ScalarProperty Name="Kazanım11" ColumnName="Kazanım11" />
+                <ScalarProperty Name="Kazanım12" ColumnName="Kazanım12" />
+                <ScalarProperty Name="Kazanım13" ColumnName="Kazanım13" />
+                <ScalarProperty Name="Kazanım14" ColumnName="Kazanım14" />
+                <ScalarProperty Name="Kazanım15" ColumnName="Kazanım15" />
+                <ScalarProperty Name="Kazanım16" ColumnName="Kazanım16" />
+                <ScalarProperty Name="Kazanım17" ColumnName="Kazanım17" />
+                <ScalarProperty Name="MySuggestion" ColumnName="MySuggestion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Student">
+            <EntityTypeMapping TypeName="Cocuk_Gelisimi_DbModel.Table_Student">
+              <MappingFragment StoreEntitySet="Table_Student">
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="StudentFirstName" ColumnName="StudentFirstName" />
+                <ScalarProperty Name="StudentLastName" ColumnName="StudentLastName" />
+                <ScalarProperty Name="StudentYearAsMonth" ColumnName="StudentYearAsMonth" />
+                <ScalarProperty Name="StudentPicture" ColumnName="StudentPicture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

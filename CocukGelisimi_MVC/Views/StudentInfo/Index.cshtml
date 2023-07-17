@@ -1,0 +1,99 @@
+﻿
+@using CocukGelisimi_MVC.Models.Entity
+
+@model List<Table_Student>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table caption-top table-hover align-middle">
+                <caption><strong>ÖĞRENCİ LİSTESİ</strong></caption>
+                <thead class="table-dark">
+                    <tr>
+                        <th>Öğrenci No</th>
+                        <th>Öğrenci Ad</th>
+                        <th>Öğrenci Soyad</th>
+                        <th>Öğrenci Yaş(Ay)</th>
+                        <th>Öğrenci Fotoğraf</th>
+                        <th>Düzenle</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+
+                    @foreach (var stdnt in Model)
+                    {
+                        <tr>
+                            <td>@stdnt.StudentID</td>
+                            <td>@stdnt.StudentFirstName</td>
+                            <td>@stdnt.StudentLastName</td>
+                            <td>@stdnt.StudentYearAsMonth</td>
+                            <td><img src="@stdnt.StudentPicture" width="100" height="100" /></td>
+                            <td>
+
+                                <a href="/StudentInfo/DeleteStudent/@stdnt.StudentID" id="iconDeleteStudent" onclick="return confirm('Silme İşlemine Devam Etmek İstiyor Musunuz?')"><span class="text-danger"><i class="fa-solid fa-trash"></i></span></a>
+                                <a href="/StudentInfo/GetStudentInfo/@stdnt.StudentID"><span class="text-primary ms-2"><i class="bi bi-pencil-square"></i></span></a>
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+
+            <div class="container my-2">
+                <div class="row">
+                    <a href="/StudentInfo/AddStudent" class="btn btn-success">Öğrenci Ekle</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+@*----------------------------------------------------------------------------------
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Modal1">Öğrenci Ekle</button>
+    <div class="modal" id="Modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Öğrenci Ekleme Paneli</h3>
+                </div>
+                <form method="post" action="/StudentInfo/AddStudent">
+                @using (Html.BeginForm("AddStudent", "StudentInfo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                    <div class="modal-body">
+                        <label>Öğrenci Numarası</label>
+                        <input type="text" name="StudentID" class="form-control" />
+
+                        <label>Öğrenci Adı</label>
+                        <input type="text" name="StudentFirstName" class="form-control" />
+
+                        <label>Öğrenci Soyadı</label>
+                        <input type="text" name="StudentLastName" class="form-control" />
+
+                        <label>Öğrenci Yaş(Ay Olarak)</label>
+                        <input type="text" name="StudentYearAsMonth" class="form-control" />
+
+                        <label>Öğrenci Fotoğrafı</label>
+                        <input type="file" name="StudentPicture" class="form-control" />
+                    </div>
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-between col-12">
+                            <div class="col-2 ">
+                                <button class="btn btn-success" type="submit">Ekle</button>
+                            </div>
+                            <div class="col-2 ">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Vazgeç</button>
+                            </div>
+                        </div>
+                    </div>
+                 }
+                </form>
+            </div>
+        </div>
+    </div>*@
