@@ -10,6 +10,6 @@ sağlamak.
 * Entity Framework - DataBase First yaklaşımı ile veri tabanı yapıldı.
 * Asp.Net MVC teknolojisi kullanılıyor.
 ## Tasarım Kısmı;  
-* CSS ve BootStrap kulanılıyor. Özellikle Bootstrap nimetlerinden responsive yapılarla arayüzü mobiliteye daha uygun hale getirilmeyi hedeflenmektedir.
+* CSS ve BootStrap kullanılıyor. Özellikle Bootstrap nimetlerinden olan responsive yapılarla arayüzü mobiliteye daha uygun hale getirilmeyi hedeflenmektedir.
 
    --------- **Proje Devam Etmektedir.** ---------------
