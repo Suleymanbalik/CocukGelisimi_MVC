@@ -6,7 +6,7 @@ süresini artırmak için pratik ve duyarlı bir arayüz yapmak.
 platform oluşturmak.
 * Öğrenci ailelerinin öğrencilerin gelişim bilgilerine her an ulaşabilmelerini
 sağlamak.
-## Proje için kullanılan yaklaşım ve teknojoji;
+## Proje için kullanılan yaklaşım ve teknoloji;
 * Entity Framework - DataBase First yaklaşımı ile veri tabanı yapıldı.
 * Asp.Net MVC teknolojisi kullanılıyor.
 ## Tasarım Kısmı;  
